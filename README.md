@@ -51,6 +51,7 @@
     <a href="https://github.com/Raxorg/OpenEstratega/issues">Report Bug</a>
     ·
     <a href="https://github.com/Raxorg/OpenEstratega/issues">Request Feature</a>
+    ·
   </p>
 </p>
 
