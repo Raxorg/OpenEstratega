@@ -44,7 +44,7 @@
   <p align="center">
     Coolest LibGDX tank game as of yet! >:D (ON DEVELOPMENT)
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Raxorg/OpenEstratega"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
