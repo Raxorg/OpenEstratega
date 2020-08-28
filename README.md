@@ -81,10 +81,12 @@
 
 This project started with the desire to share and give back to the awesome libGDX community
 <br />**Stuff that is gonna be shared:**
+
 - How to overcome game development obstacles
 - Online Multiplayer Implementation (Using Firebase)
 - Good libGDX game development practices (Hopefully)
 - Whatever you can/want to take out of the project
+
 <br />**Join the discord server to see the game being developed LIVE ON STREAM! :D https://discord.gg/qDBRMBM**
 
 ### Built With
@@ -104,7 +106,7 @@ Clone and import to Android Studio :3
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Raxorg/OpenEstratega/issues) for a list of proposed features (and known issues).
 
 
 
