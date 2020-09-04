@@ -1,4 +1,4 @@
-package com.frontanilla.estratega.stuff;
+package com.frontanilla.estratega.screens.game.stuff;
 
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

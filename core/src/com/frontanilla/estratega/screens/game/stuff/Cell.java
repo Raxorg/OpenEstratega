@@ -1,16 +1,17 @@
-package com.frontanilla.estratega.stuff;
+package com.frontanilla.estratega.screens.game.stuff;
 
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.frontanilla.estratega.screens.game.stuff.entities.Entity;
 
 public class Cell extends Sprite {
 
-    private Entity entity;
+    private com.frontanilla.estratega.screens.game.stuff.entities.Entity entity;
 
     public Cell(Sprite sprite) {
         super(sprite);
     }
 
-    public Entity getEntity() {
+    public com.frontanilla.estratega.screens.game.stuff.entities.Entity getEntity() {
         return entity;
     }
 

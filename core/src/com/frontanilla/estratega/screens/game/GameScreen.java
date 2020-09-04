@@ -1,8 +1,8 @@
-package com.frontanilla.estratega;
+package com.frontanilla.estratega.screens.game;
 
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.frontanilla.estratega.logic.GameLogic;
+import com.frontanilla.estratega.screens.game.logic.GameLogic;
 
 import static com.frontanilla.estratega.Constants.CAMERA_HEIGHT;
 import static com.frontanilla.estratega.Constants.CAMERA_WIDTH;

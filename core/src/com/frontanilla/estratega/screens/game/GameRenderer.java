@@ -1,10 +1,10 @@
-package com.frontanilla.estratega;
+package com.frontanilla.estratega.screens.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.frontanilla.estratega.stuff.AnimationWithTime;
-import com.frontanilla.estratega.stuff.GameStuff;
+import com.frontanilla.estratega.screens.game.stuff.AnimationWithTime;
+import com.frontanilla.estratega.screens.game.stuff.GameStuff;
 
 import static com.frontanilla.estratega.Constants.COLUMNS;
 import static com.frontanilla.estratega.Constants.ROWS;
@@ -44,6 +44,8 @@ public class GameRenderer {
         }
         // Render the money
         stuff.getMoneyText().draw(spriteBatch);
+        // Render the pass turn button
+        stuff.getPassTurnButton().draw(spriteBatch);
 
         spriteBatch.end();
     }

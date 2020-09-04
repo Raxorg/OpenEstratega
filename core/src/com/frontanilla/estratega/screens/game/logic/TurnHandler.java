@@ -1,7 +1,7 @@
-package com.frontanilla.estratega.logic;
+package com.frontanilla.estratega.screens.game.logic;
 
 import com.frontanilla.estratega.Player;
-import com.frontanilla.estratega.stuff.GameStuff;
+import com.frontanilla.estratega.screens.game.stuff.GameStuff;
 
 public class TurnHandler {
 
@@ -20,6 +20,7 @@ public class TurnHandler {
             turn = 0;
         }
         currentPlayer = stuff.getPlayers().get(turn);
+        currentPlayer.setMoney(currentPlayer.getMoney() + 4);
     }
 
     public Player getCurrentPlayer() {

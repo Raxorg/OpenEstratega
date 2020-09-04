@@ -1,11 +1,13 @@
-package com.frontanilla.estratega.logic;
+package com.frontanilla.estratega.screens.game.logic;
 
-import com.frontanilla.estratega.GameAssets;
-import com.frontanilla.estratega.stuff.AnimationWithTime;
-import com.frontanilla.estratega.stuff.Bullet;
-import com.frontanilla.estratega.stuff.Entity;
-import com.frontanilla.estratega.stuff.GameStuff;
-import com.frontanilla.estratega.stuff.Tank;
+import com.frontanilla.estratega.screens.game.GameAssets;
+import com.frontanilla.estratega.screens.game.stuff.AnimationWithTime;
+import com.frontanilla.estratega.screens.game.stuff.GameStuff;
+import com.frontanilla.estratega.screens.game.stuff.entities.Bullet;
+import com.frontanilla.estratega.screens.game.stuff.entities.Cellable;
+import com.frontanilla.estratega.screens.game.stuff.entities.Entity;
+import com.frontanilla.estratega.screens.game.stuff.entities.structures.Structure;
+import com.frontanilla.estratega.screens.game.stuff.entities.units.Unit;
 
 public class CollisionHandler {
 
@@ -19,7 +21,15 @@ public class CollisionHandler {
             if (entity instanceof Bullet) {
                 for (int j = 0; j < stuff.getEntities().size; j++) {
                     Entity anotherEntity = stuff.getEntities().get(j);
-                    if (anotherEntity instanceof Tank) {
+                    // Is it a unit?
+                    if (anotherEntity instanceof Unit) {
+                        boolean sameTeam = entity.getOwner() == anotherEntity.getOwner();
+                        boolean collides = entity.collides(anotherEntity.getBoundingRectangle());
+                        if (collides && !sameTeam) {
+                            collision(entity, anotherEntity);
+                        }
+                        // Is it a structure?
+                    } else if (anotherEntity instanceof Structure) {
                         boolean sameTeam = entity.getOwner() == anotherEntity.getOwner();
                         boolean collides = entity.collides(anotherEntity.getBoundingRectangle());
                         if (collides && !sameTeam) {
@@ -35,7 +45,7 @@ public class CollisionHandler {
     private void collision(Entity entity, Entity anotherEntity) {
         stuff.getEntities().removeValue(anotherEntity, true);
         stuff.getEntities().removeValue(entity, true);
-        ((Tank) anotherEntity).getCell().setEntity(null);
+        ((Cellable) anotherEntity).getCell().setEntity(null);
         AnimationWithTime animationWithTime = new AnimationWithTime(assets.getExplosionAnimation());
         animationWithTime.setPosition(anotherEntity.getX(), anotherEntity.getY());
         stuff.getExplosionAnimations().add(animationWithTime);

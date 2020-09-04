@@ -1,12 +1,12 @@
 package com.frontanilla.estratega.core;
 
 import com.badlogic.gdx.Game;
-import com.frontanilla.estratega.GameInput;
-import com.frontanilla.estratega.GameRenderer;
-import com.frontanilla.estratega.GameScreen;
-import com.frontanilla.estratega.stuff.GameStuff;
-import com.frontanilla.estratega.GameAssets;
-import com.frontanilla.estratega.logic.GameLogic;
+import com.frontanilla.estratega.screens.game.GameInput;
+import com.frontanilla.estratega.screens.game.GameRenderer;
+import com.frontanilla.estratega.screens.game.GameScreen;
+import com.frontanilla.estratega.screens.game.stuff.GameStuff;
+import com.frontanilla.estratega.screens.game.GameAssets;
+import com.frontanilla.estratega.screens.game.logic.GameLogic;
 
 public class EstrategaGame extends Game {
 

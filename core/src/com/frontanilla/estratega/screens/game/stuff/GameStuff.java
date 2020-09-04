@@ -1,10 +1,11 @@
-package com.frontanilla.estratega.stuff;
+package com.frontanilla.estratega.screens.game.stuff;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.utils.DelayedRemovalArray;
-import com.frontanilla.estratega.GameAssets;
 import com.frontanilla.estratega.Player;
+import com.frontanilla.estratega.screens.game.GameAssets;
+import com.frontanilla.estratega.screens.game.stuff.entities.Entity;
 
 import static com.frontanilla.estratega.Constants.CAMERA_HEIGHT;
 import static com.frontanilla.estratega.Constants.CAMERA_WIDTH;
@@ -17,10 +18,11 @@ public class GameStuff {
     private GameAssets assets;
     // Stuff
     private Cell[][] cells;
-    private DelayedRemovalArray<Entity> entities;
+    private DelayedRemovalArray<com.frontanilla.estratega.screens.game.stuff.entities.Entity> entities;
     private DelayedRemovalArray<Player> players;
     private DelayedRemovalArray<AnimationWithTime> explosionAnimations;
     private Text moneyText;
+    private Button passTurnButton;
 
     public void initializeStuff() {
         cells = new Cell[COLUMNS][];
@@ -46,6 +48,11 @@ public class GameStuff {
         explosionAnimations = new DelayedRemovalArray<>();
 
         moneyText = new Text(assets.getFont(), "5$", CAMERA_WIDTH / 2f, CAMERA_HEIGHT - 10f);
+
+        passTurnButton = new Button(assets.getPixel());
+        passTurnButton.setSize(150f, 150f);
+        passTurnButton.setX(CAMERA_WIDTH - passTurnButton.getWidth());
+        passTurnButton.setColor(Color.RED);
     }
 
     public Cell[][] getCells() {
@@ -66,6 +73,10 @@ public class GameStuff {
 
     public Text getMoneyText() {
         return moneyText;
+    }
+
+    public Button getPassTurnButton() {
+        return passTurnButton;
     }
 
     public void setAssets(GameAssets assets) {

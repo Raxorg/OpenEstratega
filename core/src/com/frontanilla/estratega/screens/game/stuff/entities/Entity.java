@@ -1,4 +1,4 @@
-package com.frontanilla.estratega.stuff;
+package com.frontanilla.estratega.screens.game.stuff.entities;
 
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Rectangle;
@@ -12,6 +12,10 @@ public abstract class Entity extends Sprite {
         super(sprite);
         this.owner = owner;
         setColor(owner.getColor());
+    }
+
+    public boolean contains(float x, float y) {
+        return getBoundingRectangle().contains(x, y);
     }
 
     public boolean collides(Rectangle otherRectangle) {

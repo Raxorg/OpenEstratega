@@ -1,7 +1,7 @@
-package com.frontanilla.estratega.logic;
+package com.frontanilla.estratega.screens.game.logic;
 
 import com.frontanilla.estratega.Player;
-import com.frontanilla.estratega.stuff.GameStuff;
+import com.frontanilla.estratega.screens.game.stuff.GameStuff;
 
 public class MoneyHandler {
 

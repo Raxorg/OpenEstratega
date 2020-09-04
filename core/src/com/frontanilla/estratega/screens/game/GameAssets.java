@@ -1,4 +1,4 @@
-package com.frontanilla.estratega;
+package com.frontanilla.estratega.screens.game;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
@@ -12,7 +12,7 @@ public class GameAssets {
     private AssetManager assetManager;
     // Sprites
     private Sprite cell, button, buttonSelected, colorFrame, frame, menu, playButton, scoreFrame, sword, teamsLabel, transparent, units,
-            winnerLabel, tank, bullet;
+            winnerLabel, tank, bullet, pixel, base;
     // Animations
     private Animation<Sprite> explosionAnimation;
     // Audio
@@ -39,6 +39,7 @@ public class GameAssets {
         assetManager.load("Images/colorframe.png", Texture.class);
         assetManager.load("Images/teamslabel.png", Texture.class);
         assetManager.load("Images/winner.png", Texture.class);
+        assetManager.load("Images/button.png", Texture.class);
         // Animations
         assetManager.load("animations/explosionAnimation.png", Texture.class);
         // Audio
@@ -56,7 +57,8 @@ public class GameAssets {
         // Sprites
         units = new Sprite(assetManager.get("Images/units.png", Texture.class));
         tank = new Sprite(units, 0, 0, 32, 32);
-        bullet = new Sprite(units, 32, 0, 32, 32);
+        bullet = new Sprite(units, 45, 13, 6, 6);
+        base = new Sprite(units, 0, 64, 32, 32);
 
         cell = new Sprite(assetManager.get("Images/cell.png", Texture.class));
         // Animations
@@ -82,6 +84,8 @@ public class GameAssets {
         animationSprites[14] = new Sprite(explosionTex, 64 * 2, 64 * 3, 64, 64);
         animationSprites[15] = new Sprite(explosionTex, 64 * 3, 64 * 3, 64, 64);
         explosionAnimation = new Animation<>(0.1f, animationSprites);
+
+        pixel = new Sprite(assetManager.get("Images/button.png", Texture.class));
         // Audio
         shoutingSoldier = assetManager.get("sounds/yessir.wav", Sound.class);
         explosion = assetManager.get("sounds/fireBullet.wav", Sound.class);
@@ -100,6 +104,14 @@ public class GameAssets {
 
     public Sprite getBullet() {
         return bullet;
+    }
+
+    public Sprite getPixel() {
+        return pixel;
+    }
+
+    public Sprite getBase() {
+        return base;
     }
 
     // Animations

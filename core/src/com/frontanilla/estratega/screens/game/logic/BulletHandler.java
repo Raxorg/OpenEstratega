@@ -1,8 +1,8 @@
-package com.frontanilla.estratega.logic;
+package com.frontanilla.estratega.screens.game.logic;
 
-import com.frontanilla.estratega.stuff.Bullet;
-import com.frontanilla.estratega.stuff.Entity;
-import com.frontanilla.estratega.stuff.GameStuff;
+import com.frontanilla.estratega.screens.game.stuff.entities.Bullet;
+import com.frontanilla.estratega.screens.game.stuff.entities.Entity;
+import com.frontanilla.estratega.screens.game.stuff.GameStuff;
 
 import static com.frontanilla.estratega.Constants.BULLET_SPEED;
 
@@ -15,7 +15,7 @@ public class BulletHandler {
             Entity entity = stuff.getEntities().get(i);
             if (entity instanceof Bullet) {
                 Bullet bullet = (Bullet) entity;
-                bullet.translate(BULLET_SPEED * delta, 0f);
+                bullet.translate(BULLET_SPEED * bullet.getVelocity().x * delta, BULLET_SPEED * bullet.getVelocity().y * delta);
             }
         }
     }
