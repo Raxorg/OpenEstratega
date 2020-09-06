@@ -1,9 +1,7 @@
 package com.frontanilla.estratega.screens.game.stuff;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.utils.Timer;
 
 import static com.frontanilla.estratega.Constants.CELL_SIZE;
 
