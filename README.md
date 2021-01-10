@@ -6,7 +6,7 @@
 *** an issue with the tag "enhancement".
 *** Thanks again! Now go create something AMAZING! :D
 ***
-***
+*** https://github.com/othneildrew/Best-README-Template
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
 *** github_username, repo_name, twitter_handle, email
