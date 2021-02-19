@@ -9,6 +9,8 @@ import com.frontanilla.estratega.screens.game.stuff.entities.Entity;
 import com.frontanilla.estratega.screens.game.stuff.entities.structures.Structure;
 import com.frontanilla.estratega.screens.game.stuff.entities.units.Unit;
 
+import static com.frontanilla.estratega.Constants.CELL_SIZE;
+
 public class CollisionHandler {
 
     private GameAssets assets;
@@ -48,6 +50,7 @@ public class CollisionHandler {
         ((Cellable) anotherEntity).getCell().setEntity(null);
         AnimationWithTime animationWithTime = new AnimationWithTime(assets.getExplosionAnimation());
         animationWithTime.setPosition(anotherEntity.getX(), anotherEntity.getY());
+        animationWithTime.setSize(CELL_SIZE);
         stuff.getExplosionAnimations().add(animationWithTime);
     }
 
